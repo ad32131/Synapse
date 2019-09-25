@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WOORIAPP</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/woori.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
+</head>
+<body>
+<div class="head_title" align="center">
+        <p onclick="location.href = 'index.html'"><img class="title" src="images/wooriapp/logo-header.png"></p>
+		<input type="button" class="head_btn" value="nội dung thông báo," onclick="location.href = 'notice.php'" />
+		<input type="button" class="head_btn" value="thông tin bệnh tật," onclick="location.href = 'disease_list.php'" />
+		<input type="button" class="head_btn" value="thông tin bệnh viên" onclick="location.href = 'hospital_list.php'" />
+		<input type="button" class="head_btn" value="số điện thoại khẩn cấp" onclick="location.href = 'emergency_contact.php'" />
+</div>
+<div class="body" align="center">
+    <p class="page_title">thông tin bệnh viên</p>
+	<p>
+		<select class="arrows" onchange="document.location.href=this.value">
+			<option value="http://wooriappworld.com/hospital_list.php" selected >Môn học y tế</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=1" >trạm xá</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=2" >nội khoa</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=3" >ngoại khoa</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=4" >Khoa nhi</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=5" >khoa chỉnh hình</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=6" >khoa y học gia đình</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=7" >khoa mắt</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=8" >khoa chỉnh hình</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=9" >khoa da liễu khoa tiết niệu</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=10" >khoa tiết niệu</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=11" >khoa phụ sản</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=12" >khoa tâm thần</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=13" >nha khoa</option>
+			<option value="http://wooriappworld.com/hospital_list.php?type=14" >đông y</option>
+			<option value="http://wooriappworld.com/hospital_list.php" >Tất cả</option>
+  		</select>
+	</p>
+    <table id="hospital" class="display">
+		<colgroup>
+			<col class width="15%" align="center">
+			<col class width="85%">
+		</colgroup>
+        <thead>
+        <tr align="center">
+            <th>No</th>
+            <th>Subject</th>
+        </tr>
+		</thead>
+        <tbody>
+			<tr>
+				<td></td>
+			</tr>
+        </tbody>
+    </table>
+    <script>
+        var pri_content_num = 0;
+		
+		$(document).ready( function () {
+            $('#hospital').DataTable({
+                "filter": false,
+                "bLengthChange": false,
+                "bInfo": false
+                })
+        });
+
+        $(content).hide();
+		
+        function content_onoff(content_num){
+            if($('.content'+content_num).css("display")=="none") {
+                $('.content'+content_num).show();
+				$('.content'+pri_content_num).hide();
+				pri_content_num = content_num;
+            }
+
+            else if($('.content'+content_num).css("display")=="block") {
+        	    $('.content'+content_num).hide();
+            }
+        };
+    </script>
+</div>
+
+<footer>
+	<table align="center">
+		<tbody class="footer">
+			<tr>
+				<td><img src="/images/wooriapp/img-footer@3x.png">&nbsp;&nbsp;&nbsp;</td>
+				<td align="left">Synapse Society는 외국인 노동자, 이주외국인<br>의 안전한 삶을 위해 노력하는 사회적기업을 지향<br>하는 기업입니다.</td>
+			</tr>
+			<tr>
+				<td colspan="2">Web/App 개발 문의 : <a class="footer" href="mailto:synapsesociety2018@gmail.com">synapsesociety2018@gmail.com</a></td>
+			</tr>
+		</tbody>
+	</table>
+</footer>
+</body>
+</html>

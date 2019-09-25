@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PWA">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <meta name="msapplication-starturl" content="/">
+	
+	<script>if ('serviceWorker' in navigator) {navigator.serviceWorker.register('sw.js');}</script>
+	
+    <title>WOORIAPP</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/woori.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="head_title" align="center">
+        <p onclick="location.href = 'index.html'"><img class="title" src="images/wooriapp/logo-header.png"></p>
+		<input type="button" class="head_btn" value="nội dung thông báo," onclick="location.href = 'notice.php'" />
+		<input type="button" class="head_btn" value="thông tin bệnh tật," onclick="location.href = 'disease_list.php'" />
+		<input type="button" class="head_btn" value="thông tin bệnh viên" onclick="location.href = 'hospital_list.php'" />
+		<input type="button" class="head_btn" value="số điện thoại khẩn cấp" onclick="location.href = 'emergency_contact.php'" />
+</div>
+<div class="body" align="center">
+    <p class="index_content">Khi điện thoại của bạn được kết nối, bấm 13.</p><br>
+    <p><a href='tel:1644-0644'><img src="images/wooriapp/button-call@3x.png"></a></p>
+</div>
+
+<script language="javascript" type="text/javascript">  
+<!--  
+function openWin(){  
+    window.open("push_write.php", "", "toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+}  
+//-->  
+</script>  
+
+<footer>
+	<table align="center">
+		<tbody class="footer">
+			<tr>
+				<td><img src="/images/wooriapp/img-footer@3x.png">&nbsp;&nbsp;&nbsp;</td>
+				<td align="left"><a class="footer" href="admin_login.php">Synapse</a>
+				<?php
+					session_start();
+					if($_SESSION['admin']==1){
+					echo "<a class=\"footer\" onclick=\"javascript:openWin();\">Society</a>";
+					} else {
+					echo "Society";
+					}
+				?>
+				는 외국인 노동자, 이주외국인<br>의 안전한 삶을 위해 노력하는 사회적기업을 지향<br>하는 기업입니다.</td>
+			</tr>
+			<tr>
+				<td colspan="2">Web/App 개발 문의 ： <a class="footer" href="mailto:synapsesociety2018@gmail.com">synapsesociety2018@gmail.com</a></td>
+			</tr>
+		</tbody>
+	</table>
+</footer>
+</body>
+</html>

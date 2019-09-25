@@ -1,0 +1,85 @@
+td {
+	font-family: "±¼¸²","µ¸¿ò","tahoma";
+	font-size: 9pt;
+	line-height: 16px;
+	color: #878787;
+	letter-spacing:0pt;
+    word-break:break-all;
+   }
+   
+   body {
+	margin-left: 20px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+   
+.input{
+	border:1px solid;
+	border-color:#cccccc;
+	font-family: "??";
+	font-size: 9pt;
+	color:#696969;
+	height:20px;
+
+}
+.inputt{
+	border:1px solid;
+	border-color:#cccccc;
+	font-family: "??";
+	font-size: 9pt;
+	color:#696969;
+	height:20px;
+	text-align:right
+}
+.no_line{
+	border:1px solid;
+	border-color:#ffffff;
+	 font-family: "±¼¸²";
+	font-size: 9pt;
+	color:#696969;
+
+}
+
+
+.input2{
+	border:1px solid;
+	border-color:#FFFFFF;
+	font-family: "??";
+	font-size: 9pt;
+	color:#696969;
+	height:20px;
+}
+
+a{ font-family: "±¼¸²,µ¸¿ò"; font-size: 9pt; color: #7C7B7B; text-decoration:none; }
+a:hover{ font-family: "±¼¸²,µ¸¿ò";font-size: 9pt;color: #535353;text-decoration:none; }
+
+ img      {border: none;} 
+.here{color:#525151}
+
+.menu{color:#535353 
+	padding-left: 20px;
+	padding-left: 20px;
+	color: #535353;
+}
+
+.style1 {
+	color: #000000;
+	font-weight: bold;
+}
+
+
+
+.big {font-family: "µ¸¿ò"; font-size: 12pt; color: #000000;	font-weight: bold;}
+
+
+.tit{ font-family: "±¼¸²,µ¸¿ò"; font-size: 9pt; color: #000000; text-decoration:none;font-weight: bold; }
+.tit:hover{ font-family: "±¼¸²,µ¸¿ò";font-size: 9pt;color: #000000;text-decoration:none; font-weight: bold;}
+.indent{padding-left:15px}
+
+.tax_print00 {
+	font-size: 16px;
+	font-family:"dotum";
+	color: #666666;
+	font-weight:bold;
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "923945451645",
+    "firebase_url": "https://wooriapp-be48d.firebaseio.com",
+    "project_id": "wooriapp-be48d",
+    "storage_bucket": "wooriapp-be48d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923945451645:android:626f49ffef8067c9",
+        "android_client_info": {
+          "package_name": "com.android.WooriApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923945451645-mupk3lfrj8kh3uebmv40dsmuf0203ekn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuyadd-gTMtRYWw78J2SmVX9XtyhFidsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923945451645-mupk3lfrj8kh3uebmv40dsmuf0203ekn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

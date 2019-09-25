@@ -1,0 +1,87 @@
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  
+  var token="";
+	
+	var config = {
+		apiKey: "AIzaSyAfShYk-3yTo07yJBApbV0Qy_Zf1R426co",
+		authDomain: "wooriapp-be48d.firebaseapp.com",
+		databaseURL: "https://wooriapp-be48d.firebaseio.com",
+		projectId: "wooriapp-be48d",
+		storageBucket: "wooriapp-be48d.appspot.com",
+		messagingSenderId: "923945451645"
+		};
+	firebase.initializeApp(config);
+	const messaging = firebase.messaging();
+    messaging.usePublicVapidKey("BOzCeEQcB2WTJYplR6p9dSPhSQbppPt9X64-YB5pK5G9GbfD_afiwMT7FGEXQ_H-GNA8Bzyz9s093fjPmU2BBQ4");
+
+
+    registSW();
+    initialButton();
+
+    function initialButton() {
+      messaging.getToken().then(token => {
+        if (token) {
+          document.getElementById("fcmbutton").innerText = "메세지 로딩중";
+        } else {
+          document.getElementById("fcmbutton").innerText = "푸시 기능 활성화";
+        }
+      }).catch(function (err) {
+        console.log('An error occurred while retrieving token1. ', err.message);
+      });
+    }
+
+    function getSubscription() {
+      messaging.getToken().then(token => {
+        if (!token) {
+          getNotification();
+        } else {
+          displayToken();
+        }
+      }).catch(function (err) {
+        console.log('An error occurred while retrieving token2. ', err);
+      });
+    }
+
+
+    function getNotification() {
+      messaging.requestPermission().then(function () {
+        console.log('Notification permission granted.');
+        displayToken();
+        initialButton();
+      }).catch(function (err) {
+        console.log('Unable to get permission to notify.', err);
+      });
+    }
+
+    function displayToken() {
+      messaging.getToken().then(token => {
+        if (token) {
+          console.log(token);
+        } else {
+          console.log('No Instance ID token available. Request permission to generate one.');
+        }
+      }).catch(function (err) {
+        console.log('An error occurred while retrieving token.!! ', err);
+      });
+    }
+
+
+
+    function registSW() {
+
+
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function (registration) {
+              console.log('sw.js registration successful with scope: ', registration.scope);
+            }, function (err) {
+              console.log('sw.js registration failed: ', err);
+            });
+        });
+      }
+    }
+</script>

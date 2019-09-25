@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PWA">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <meta name="msapplication-starturl" content="/">
+    
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>WOORIAPP</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="head_title" align="center" onclick="location.href = 'index.html'">
+        <h2>WOORIAPP</h2>
+</div>
+<div class="head_btn" align="center">
+    <input type="button" class="btn btn-primary" value="공지사항" onclick="location.href = 'notice.php'" />
+    <input type="button" class="btn btn-primary" value="질병 정보" onclick="location.href = 'disease_list.php'" />
+    <input type="button" class="btn btn-primary" value="병원 정보" onclick="location.href = 'hospital_list.php'" />
+    <input type="button" class="btn btn-primary" value="긴급연락처" onclick="location.href = 'emergency_contact.php'" />
+</div>
+<div class="body" align="center">
+    <p>전화가 연결되면 13번을 누르세요.</p><br>
+    <p><img src="images/phone-symbol-2.png"></p>
+</div>
+<footer>
+    <a class="footer" href="admin_login.php">Synapse Society</a>는 외국인노동자, 이주노동자들의 안전한 삶을 위해 노력하는 사회적기업을 지향하는 기업입니다.<br/>
+	Web/App 개발 문의 : <a class="footer" href="mailto:synapsesociety2018@gmail.com">synapsesociety2018@gmail.com</a>
+</footer>
+</body>
+</html>

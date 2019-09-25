@@ -1,0 +1,176 @@
+/*!
+ * wooriapp의 css시트입니다. 여기서는 부트스트랩 부분이 아닌 부분의 디자인만 설정되어있으니 참고바랍니다.
+ */
+ 
+a.footer:link {text-decoration: none; color: white;}
+a.footer:visited {text-decoration: none; color: white;}
+a.footer:active {text-decoration: none; color: white;}
+a.footer:hover {text-decoration: none; color: white;}
+
+a.emergency:link {text-decoration: none; color: black;}
+a.emergency:visited {text-decoration: none; color: black;}
+a.emergency:active {text-decoration: none; color: black;}
+a.emergency:hover {text-decoration: none; color: black;}
+
+div.head_title {
+  height: 20%; /* PC기준으로 할 경우 33%로 설정 */
+  background-color: #20c997;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  vertical-align: middle;
+  padding: 0.1rem 0.1rem;
+  background-image: linear-gradient(to bottom, #8de0fa, #55bef2);
+}
+
+
+img.title {
+  margin-top: 20px;
+  width: 500px;
+}
+
+
+input.head_btn {
+  width: 47%;
+  height: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: #55bef2;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 2px;
+  border: solid 1px #ffffff;
+}
+
+div.body {
+  height: 59%; /* PC기준으로 할 경우 57%로 설정 */
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+footer {
+  width: 100%;
+  height: 18%;
+  clear: both;
+  position: flex;
+  background-color: #3d3f40;
+  text-align: center;
+  padding: 3%;
+}
+
+tbody.footer {
+  font-weight: 400;
+  font-size: 32px;
+  color: white;
+}
+
+h {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 0.1rem 0.1rem;
+  border-radius: 0.25rem;
+}
+
+h3 {
+  background-color: #28a745;
+}
+
+h5 {
+  background-color: #005cbf;
+  font-weight: 400;
+}
+
+p.page_title {
+  background-color: #28a745;
+  font-size: 50px;
+  margin-top: -1%;
+  margin-bottom: 3%;
+}
+
+p.index_content {
+  font-size: 40px;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #7c7e80;
+}
+
+img.phone {
+  width: 50%;
+}
+
+table {
+  font-size: 32px;
+}
+
+select {
+  font-size: 35px;
+  width: 40%;
+  
+}
+
+.arrows {
+  width: 60%;
+  height: 80px;
+  text-align: center;
+}
+
+/*!
+ * table 임의 디자인입니다. 나머지옵션은 table.css에 있습니다.
+ * dataTables_paginate: previous, next 버튼
+ * paging_simple_numbers: 페이지번호
+ */
+div.dataTables_paginate {
+  font-size: 25px;
+}
+
+div.paging_simple_numbers {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+/*!
+ * width를 제외한 나머지옵션은 bootstrap.css에 있습니다.
+ */
+.btn {
+  font-size: 40px;
+  width: 24.5%;
+}
+
+
+/*!
+ * 로딩화면
+ */
+div.load {
+  width: 100%;
+  text-align: center;
+}
+
+.logo_title {
+  width: 60%;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #55bef2;
+ }
